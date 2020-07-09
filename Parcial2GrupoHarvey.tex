@@ -1,0 +1,188 @@
+\documentclass[12pt]{exam}
+
+\usepackage[spanish]{babel}
+\usepackage[utf8]{inputenc}
+%\usepackage[margin=1in]{geometry} \marginsize{.5in}{.5in}{.75in}{.75in}
+\usepackage{geometry}
+\geometry{
+	letterpaper,
+	total={170mm,257mm},
+	left=15mm,
+	top=30mm,
+}
+\usepackage{pgf,pgfarrows,latexsym,amssymb,amsmath,amsthm,enumerate,array}
+\usepackage{multicol}
+\usepackage{multirow}
+\usepackage{graphicx}
+\usepackage{enumerate}
+\usepackage{venndiagram}
+\usepackage{tikz}
+
+%\usepackage{mathptmx}
+%\usepackage{ragged2e}
+
+
+\newcommand{\clase}{Precálculo}
+\newcommand{\examnum}{SEGUNDO EXAMEN PARCIAL}
+\newcommand{\examdate}{2 de Abril  de 2020}
+\newcommand{\timelimit}{120 Minutos}
+
+\newcommand{\AND}{\wedge}
+\newcommand{\OR}{\vee}
+\newcommand{\fA}{{\mathfrak{A}}} % Gothic letters, if you want to use them
+\newcommand{\cA}{{\mathcal{A}}} % Cal letters, if you want to use them
+
+\renewcommand{\Re}{\operatorname{Re}}
+\renewcommand{\Im}{\operatorname{Im}}
+\renewcommand{\phi}{\varphi}
+\newcommand{\eps}{\varepsilon}
+\newcommand{\eqdef}{\coloneqq}
+\hyphenation{razona-miento}
+\hyphenation{pro-blema}
+\hyphenation{estu-diante}
+\DeclareMathOperator{\imagunit}{i}
+\DeclareMathOperator{\enumber}{e}
+\DeclareMathOperator{\Image}{im}
+\DeclareMathOperator{\Range}{\mathcal{R}}
+\DeclareMathOperator{\sign}{sgn}
+\DeclareMathOperator{\closure}{clos}
+\DeclareMathOperator{\supp}{supp}
+\DeclareMathOperator{\interior}{int}
+\DeclareMathOperator{\conv}{conv}
+\DeclareMathOperator{\dist}{dist}
+\DeclareMathOperator{\SimpleMeasurables}{\mathcal{SM}}
+\DeclareMathOperator{\Measurables}{\mathcal{M}}
+
+\newcommand{\matr}[2]{\left(\begin{array}{#1}#2\end{array}\right)}
+\newcommand{\detmatr}[2]{\left|\begin{array}{#1}#2\end{array}\right|}
+
+\newcommand{\uniformlyto}[1]{\xLongrightarrow{#1}}
+\newcommand{\pointwiseto}[1]{\xlongrightarrow{#1}}
+\newcommand{\aeto}[1]{\xlongrightarrow{#1\text{-c.t.p.}}}
+\newcommand{\muto}[1]{\xrightharpoondown{#1}}
+\newcommand{\aeeq}[1]{\xlongequal{#1\text{-c.t.p.}}}
+\newcommand{\auniformlyto}[1]{\xLongrightarrow{#1\text{-c.u.}}}
+
+\newcommand{\com}{ \lq \lq }
+\newcommand{\comB}[1]{ \lq \lq #1\rq \rq} %%%% texto entre ""
+
+\definecolor{lightgray}{rgb}{0.8,0.8,0.8}
+\definecolor{lightgreen}{rgb}{0.8,1,0.8}
+\definecolor{lightblue}{rgb}{0.8,0.8,1}
+\newcommand{\h}{1.732}
+\newcommand{\hhalf}{0.866}
+\newcommand{\Bx}{2}
+\newcommand{\By}{0.8}
+\newcommand{\Cy}{-3}
+\newcommand{\titley}{3}
+
+\pagestyle{head}
+\firstpageheader{\Large\sc\clase}{}{\sc\examnum}
+\runningheader{\sc\clase}{}{\sc\examnum\ - Pagina \thepage\ de \numpages}
+\runningheadrule
+
+\parindent=0mm
+
+\begin{document}
+	\vspace{1cm}
+	\begin{tabular}{ll}
+		\multirow{5}{*}{\includegraphics[scale=0.24]{Sabana1.png}}
+		& \large\hspace{0.2cm}Nombre: \makebox[3.8in]{\hrulefill}\vspace{0.2cm}\\
+		& \large\hspace{0.2cm}Fecha: \textbf{\examdate} \vspace{0.2cm}\\
+		& \large\hspace{0.2cm}21107-Grupo 15    \vspace{0.2cm}\\
+		& \large\hspace{0.2cm}Profesor:  HARVEY HERNÁNDEZ YOMAYUSA
+	\end{tabular}\\
+	\rule[2ex]{\textwidth}{1pt} 
+	
+	\begin{itemize}
+		\scriptsize{\item \textbf{No se permite el uso de elementos electrónicos, smartwatches, etc. La presencia de cualquier equipo de comunicación en el entorno del examen es considerado intento de fraude. Éste o cualquier otro intento de fraude implica cero en el examen y se reporta a la facultad.}
+			\item \textbf{La comprensión del examen es parte de la evaluación, por tanto, no se responden preguntas durante el desarrollo de éste.} 
+			\item \textbf{Se evalúa procedimiento y/o justificación, por tanto, sea claro y ordenado. Respuesta sin justificar no será válida.}
+			% \item \textbf{Este examen contiene \numpages\ páginas y \numquestions\ preguntas.  El Total de puntos en esta prueba es de \numpoints}
+		}	
+		
+	\end{itemize} 
+	
+	%\texttt{\noindent}
+	\rule[2ex]{\textwidth}{1pt}
+
+\begin{questions}
+
+\question[12] Si se tiene la frase \comB{\textbf{El precio del petróleo no aumentará,  si no hay conflictos  en Medio Oriente o Estados Unidos no cambia las políticas económicas}}.
+
+
+\begin{parts}
+	
+	\part[4]\framebox[1.5cm][c]{R1-B1}  Identifique y escriba cada una de las proposiciones simples que conforman la frase.\\
+	
+	\part[4] \framebox[1.5cm][c]{R1-B1} Escribir la frase en lenguaje formal (simbólico)\\
+	\part[4] \framebox[1.5cm][c]{R3-B3} Construir la tabla de verdad.
+\end{parts}
+	
+\question[8]  En los siguientes ejercicios demostrar que una proposición es consecuencia lógica de las premisas dadas completando el esquema.
+\begin{parts}
+	\part[4] \framebox[1.5cm]{R3-C1} Identifique y use las reglas de inferencia que se aplican en el siguiente argumento para obtener una conclusión válida.\\
+	\begin{center}
+		\begin{minipage}{5cm}
+			\begin{itemize}
+		\item[(P1)] $ A \implies \lnot W  $  
+		\item[(P2)] $ \lnot S \implies R $   
+		\item[(P3)] $ \lnot M \implies K $
+		\item[(P4)] $ N \implies A  $ 
+		\item[(P5)] $ K \implies \lnot S $
+		\item[(P6)] $ R \implies N $
+		\item[(P7)] $ W $
+		\end{itemize}
+	\end{minipage}
+	\end{center}
+\part[4] \framebox[1.5cm]{R3-C3} Teniendo en cuenta el procedimiento realizado en el punto anterior, si se pidiera plantear el ejercicio como demostración, ¿Cómo se formularía el enunciado de la demostración?\\
+
+\end{parts}
+
+
+\newpage
+\question[14]  Se tiene el siguiente enunciado
+
+\comB{\textbf{Si el ratón se come el queso, entonces el gato atrapa al ratón. Pero el gato no atrapa al ratón. Por tanto, el ratón no se come el queso}}.
+
+
+\begin{parts}
+	\part[4]\framebox[1.5cm][c]{R1-B1} Represente simbólicamente las proposiciones y las premisas planteadas
+	
+	\part[4] \framebox[1.5cm][c]{R3-B3} ¿Qué conclusión se puede inferir a partir de las premisas?,Escríbala primero en lenguaje natural y luego  simbolícela.
+	
+	\part[4] \framebox[1.5cm][c]{R3-B2} Realice el procedimiento necesario para validar el argumento.
+	
+	\part[2] \framebox[1.5cm][c]{R3-B3} A partir de los procedimientos anteriores que puede concluir, ¿El argumento es válido si o nó?. 
+	
+\end{parts}
+
+
+\question[8] Aplicando las Leyes de Morgan escriba las proposiciones equivalentes en su forma de negacion:
+\begin{parts}
+	\part[4] \framebox[1.5cm][c]{R3-B2} Este semestre vemos 7 materias y todas están complicadas.
+	 
+	%	\textcolor{red}{R./No es cierto que, Este semestre vemos 7 materias o no todas están complicadas. }
+	\part [4] \framebox[1.5cm][c]{R3-B2} El trabajo estaba difícil  o yo estaba confundido.\\
+ 
+	%	\textcolor{red}{R./ No es cierto que, el trabajo no estaba difícil y  yo no estaba confundido. }
+\end{parts}
+
+\question[8] Dada la frase: \comB{\textbf{No todos los países tienen un buen sistema de salud}}.
+		\begin{parts}
+		\part[4] \framebox[1.5cm][c]{R1-B1} Simbolice  la frase\\
+		\part[4] \framebox[1.5cm][c]{R3-C2} Escriba la negación de la frase utilizando la negación del cuantificador, de forma verbal.\\
+	 
+		
+	
+		
+		%\noindent\rule{15cm}{0.4pt}\\
+	\end{parts}
+
+
+
+
+
+\end{questions}
+
+\end{document}
